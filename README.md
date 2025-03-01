@@ -64,6 +64,17 @@ The Admin Dashboard is a comprehensive tool designed for managing user data, vie
 
 🔑 Manage API keys and system preferences
 
+## 🌍 Routes
+
+| Path         | Description              |
+|--------------|--------------------------|
+| `/`          | Login Page               |
+| `/dashboard` | Admin Dashboard Page     |
+| `/users`     | User Management Page     |
+| `/reports`   | Reports & Analytics      |
+| `/settings`  | Admin Settings           |
+
+
 ## 📦 Installation
 
 Clone the repository:
