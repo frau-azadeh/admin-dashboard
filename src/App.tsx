@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import { useSelector } from "react-redux";
 import { RootState } from "./store/store";
 import Login from "./pages/Login";
@@ -10,7 +15,9 @@ import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 
 function App() {
-  const isAuthenticated = useSelector((state: RootState) => state.auth.isAuthenticated);
+  const isAuthenticated = useSelector(
+    (state: RootState) => state.auth.isAuthenticated,
+  );
 
   return (
     <Router>
@@ -22,7 +29,12 @@ function App() {
           <Route path="/setting" element={<Setting />} />
         </Route>
         {/* اگر مسیر اشتباه بود، به داشبورد یا لاگین هدایت کن */}
-        <Route path="*" element={isAuthenticated ? <Navigate to="/dashboard" /> : <Navigate to="/" />} />
+        <Route
+          path="*"
+          element={
+            isAuthenticated ? <Navigate to="/dashboard" /> : <Navigate to="/" />
+          }
+        />
       </Routes>
     </Router>
   );

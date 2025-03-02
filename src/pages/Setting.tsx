@@ -25,7 +25,9 @@ const Settings = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 text-right">
       <div className="w-full max-w-lg bg-white p-6 rounded-lg shadow-md">
-        <h2 className="text-2xl font-semibold text-gray-700 mb-4">تنظیمات حساب</h2>
+        <h2 className="text-2xl font-semibold text-gray-700 mb-4">
+          تنظیمات حساب
+        </h2>
 
         {/* فیلد تغییر نام کاربری */}
         <label className="block mb-2 text-gray-600">نام کاربری:</label>

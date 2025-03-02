@@ -13,7 +13,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
 body {
   color: var(--foreground);
   background: var(--background);
@@ -34,5 +33,4 @@ h1 {
   a:hover {
     color: #747bff;
   }
-  
 }

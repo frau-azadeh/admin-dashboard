@@ -1,4 +1,15 @@
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+  PieChart,
+  Pie,
+  Cell,
+} from "recharts";
 
 const data = [
   { name: "فروردین", بازدید: 4000, کاربران: 2400 },
@@ -29,8 +40,18 @@ const Charts = () => {
             <XAxis dataKey="name" />
             <YAxis />
             <Tooltip />
-            <Line type="monotone" dataKey="بازدید" stroke="#8884d8" strokeWidth={2} />
-            <Line type="monotone" dataKey="کاربران" stroke="#82ca9d" strokeWidth={2} />
+            <Line
+              type="monotone"
+              dataKey="بازدید"
+              stroke="#8884d8"
+              strokeWidth={2}
+            />
+            <Line
+              type="monotone"
+              dataKey="کاربران"
+              stroke="#82ca9d"
+              strokeWidth={2}
+            />
           </LineChart>
         </ResponsiveContainer>
       </div>
@@ -39,13 +60,23 @@ const Charts = () => {
       <div className="bg-white p-6 shadow rounded-lg flex flex-col items-center">
         <h3 className="text-xl font-semibold mb-4">وضعیت کاربران</h3>
         <ResponsiveContainer width="100%" height={300}>
-            <PieChart>
-                <Pie data={pieData} dataKey="value" cx="50%" cy="50%" outerRadius={80} label>
-                    {pieData.map((_, index) => (
-                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                    ))}
-                </Pie>
-            </PieChart>
+          <PieChart>
+            <Pie
+              data={pieData}
+              dataKey="value"
+              cx="50%"
+              cy="50%"
+              outerRadius={80}
+              label
+            >
+              {pieData.map((_, index) => (
+                <Cell
+                  key={`cell-${index}`}
+                  fill={COLORS[index % COLORS.length]}
+                />
+              ))}
+            </Pie>
+          </PieChart>
         </ResponsiveContainer>
       </div>
     </div>

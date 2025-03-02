@@ -1,5 +1,4 @@
 export default {
-    testEnvironment: "jsdom",
-    setupFilesAfterEnv: ["<rootDir>/src/setupTests.ts"],
-  };
-  
+  testEnvironment: "jsdom",
+  setupFilesAfterEnv: ["<rootDir>/src/setupTests.ts"],
+};
