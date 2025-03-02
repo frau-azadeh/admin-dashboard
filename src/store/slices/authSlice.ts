@@ -7,11 +7,19 @@ interface AuthState {
   isAuthenticated: boolean;
 }
 
-// مقدار اولیه وضعیت (در صورتی که کاربر از قبل لاگین کرده باشد، اطلاعات از `localStorage` خوانده می‌شود)
+// تابع کمکی برای خواندن `localStorage`
+const getLocalStorageItem = (key: string): string | null => {
+  if (typeof window !== "undefined") {
+    return localStorage.getItem(key);
+  }
+  return null;
+};
+
+// مقدار اولیه وضعیت (خواندن از `localStorage`)
 const initialState: AuthState = {
-  user: localStorage.getItem("user") || null,
-  token: localStorage.getItem("token") || null,
-  isAuthenticated: !!localStorage.getItem("token"),
+  user: getLocalStorageItem("user"),
+  token: getLocalStorageItem("token"),
+  isAuthenticated: !!getLocalStorageItem("token"),
 };
 
 // ایجاد Slice برای مدیریت احراز هویت
@@ -36,9 +44,15 @@ const authSlice = createSlice({
       localStorage.removeItem("user");
       localStorage.removeItem("token");
     },
+
+    // **آپدیت نام کاربر**
+    updateUser: (state, action: PayloadAction<string>) => {
+      state.user = action.payload;
+      localStorage.setItem("user", action.payload);
+    },
   },
 });
 
 // خروجی اکشن‌ها و ریدوسر
-export const { login, logout } = authSlice.actions;
+export const { login, logout, updateUser } = authSlice.actions;
 export default authSlice.reducer;
