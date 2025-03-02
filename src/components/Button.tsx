@@ -1,16 +1,24 @@
-import React from "react";
+import React from 'react';
 
-interface ButtonProps {
-  children: React.ReactNode;
-  onClick?: () => void;
+interface ButtonProps{
+  label: string;
+  disabled?: boolean;
+  onClick?: ()=> void;
 }
 
-const Button: React.FC<ButtonProps> = ({ children, onClick }) => {
+const Button: React.FC<ButtonProps> = ({label, disabled, onClick}) => {
   return (
-    <button onClick={onClick} data-testid="custom-button">
-      {children}
+    <button 
+      type='submit'
+      className={`w-full py-2 rounded-lg transition text-white ${
+        disabled? "bg-blue-300 cursor-not-allowed" : "bg-blue-600 hover:bg-blue-900"
+      }`}
+      disabled={disabled}
+      onClick={onClick}
+    >
+      {label}
     </button>
-  );
-};
+  )
+}
 
-export default Button;
+export default Button
