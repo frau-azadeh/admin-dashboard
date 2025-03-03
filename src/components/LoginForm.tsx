@@ -18,7 +18,7 @@ const LoginForm: React.FC<LoginFormProps> = ({
   onSubmit,
 }) => {
   return (
-    <form onSubmit={onSubmit} className="mt-4">
+    <form onSubmit={onSubmit} className="mt-4" role="form">
       <InputField
         label="ایمیل"
         type="email"
