@@ -1,16 +1,14 @@
 import React from "react";
 import InputField from "./InputField";
 import Button from "./Button";
-
-interface LoginFormProps {
+interface LoginFromProps {
   email: string;
   password: string;
   setEmail: (email: string) => void;
   setPassword: (password: string) => void;
   onSubmit: (e: React.FormEvent) => void;
 }
-
-const LoginForm: React.FC<LoginFormProps> = ({
+const LoginForm: React.FC<LoginFromProps> = ({
   email,
   password,
   setEmail,
@@ -18,7 +16,7 @@ const LoginForm: React.FC<LoginFormProps> = ({
   onSubmit,
 }) => {
   return (
-    <form onSubmit={onSubmit} className="mt-4" role="form">
+    <form onSubmit={onSubmit} role="form" className="mt-4">
       <InputField
         label="ایمیل"
         type="email"
