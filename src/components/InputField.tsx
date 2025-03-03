@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 interface InputFieldProps {
   label: string;
@@ -7,26 +7,19 @@ interface InputFieldProps {
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const InputField: React.FC<InputFieldProps> = ({
-  label,
-  type,
-  value,
-  onChange,
-}) => {
+const InputField: React.FC<InputFieldProps> = ({label, type, value, onChange}) => {
   return (
-    <div className="mb-4">
-      <label htmlFor={label} className="block text-gray-600">
-        {label}
-      </label>
-      <input
+    <div className='mb-4'>
+      <label htmlFor={label} className='block text-gray-600'>{label}</label>
+      <input 
         id={label}
         value={value}
-        type={type}
         onChange={onChange}
-        className="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-300"
+        type={type}
+        className='w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-300'
       />
     </div>
-  );
-};
+  )
+}
 
 export default InputField;
