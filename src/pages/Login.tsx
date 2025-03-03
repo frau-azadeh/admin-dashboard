@@ -33,8 +33,16 @@ const Login = () => {
   return (
     <div className="flex justify-center items-center">
       <div className="w-full max-w-md bg-white p-6 rounded-lg shadow-md">
-        <h2 className="text-2xl font-semibold text-center text-gray-700">ورود به پنل مدیریت</h2>
-        <LoginForm email={email} password={password} setEmail={setEmail} setPassword={setPassword} onSubmit={handleLogin} />
+        <h2 className="text-2xl font-semibold text-center text-gray-700">
+          ورود به پنل مدیریت
+        </h2>
+        <LoginForm
+          email={email}
+          password={password}
+          setEmail={setEmail}
+          setPassword={setPassword}
+          onSubmit={handleLogin}
+        />
       </div>
     </div>
   );
