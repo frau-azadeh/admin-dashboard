@@ -11,8 +11,9 @@ interface InputFieldProps{
 const InputField: React.FC<InputFieldProps> = ({label, type, value, onChange}) => {
   return (
     <div className='mb-4'>
-        <label className='block text-gray-600'>{label}</label>
+        <label htmlFor={label} className='block text-gray-600'>{label}</label>
         <input
+            id={label}
             value={value}
             type={type}
             onChange={onChange}
