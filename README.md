@@ -2,7 +2,7 @@
 
 A modern Admin Dashboard built with React, TypeScript, Redux Toolkit, GraphQL, and TailwindCSS. This project provides an intuitive UI for managing users, viewing reports, and handling administrative settings.
 
-## 🏗️ Tech Stack
+### 🏗️ Tech Stack
 
 ⚛️ React.js - Frontend framework
 
@@ -18,11 +18,11 @@ A modern Admin Dashboard built with React, TypeScript, Redux Toolkit, GraphQL, a
 
 🧪 Jest + React Testing Library - Unit testing
 
-## 📖 Project Overview
+### 📖 Project Overview
 
 The Admin Dashboard is a comprehensive tool designed for managing user data, viewing analytical reports, and handling administrative settings. This project allows administrators to securely log in, manage users, generate reports, and customize system settings with ease.
 
-## 🛠️ Core Functionalities
+### 🛠️ Core Functionalities
 
 1. Authentication & Authorization
 
@@ -64,7 +64,7 @@ The Admin Dashboard is a comprehensive tool designed for managing user data, vie
 
 🔑 Manage API keys and system preferences
 
-## 🌍 Routes
+### 🌍 Routes
 
 | Path         | Description          |
 | ------------ | -------------------- |
@@ -74,7 +74,7 @@ The Admin Dashboard is a comprehensive tool designed for managing user data, vie
 | `/reports`   | Reports & Analytics  |
 | `/settings`  | Admin Settings       |
 
-## 📦 Installation
+### 📦 Installation
 
 Clone the repository:
 
@@ -89,7 +89,7 @@ Start the development server:
 
         npm start
 
-## 🤝 Contributing
+### 🤝 Contributing
 
 Contributions are welcome! Feel free to submit a pull request or open an issue.
 
