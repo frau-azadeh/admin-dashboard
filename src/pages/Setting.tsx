@@ -1,9 +1,12 @@
 import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { updateUser } from "../store/slices/authSlice";
-import { RootState } from "../store/store";
+
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
+import { useDispatch, useSelector } from "react-redux";
+
+import { updateUser } from "../store/slices/authSlice";
+import { RootState } from "../store/store";
 
 const Settings = () => {
   const dispatch = useDispatch();

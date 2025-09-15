@@ -1,6 +1,8 @@
 import React from "react";
-import InputField from "./InputField";
+
 import Button from "./Button";
+import InputField from "./InputField";
+
 interface LoginFromProps {
   email: string;
   password: string;

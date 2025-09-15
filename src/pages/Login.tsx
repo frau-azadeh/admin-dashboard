@@ -1,9 +1,12 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { login } from "../store/slices/authSlice";
-import { useNavigate } from "react-router-dom";
+
 import { toast } from "react-toastify";
+
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+
 import LoginForm from "../components/LoginForm";
+import { login } from "../store/slices/authSlice";
 
 const Login = () => {
   const dispatch = useDispatch();

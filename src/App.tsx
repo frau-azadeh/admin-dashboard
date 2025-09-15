@@ -1,17 +1,21 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
-import { useSelector } from "react-redux";
-import { RootState } from "./store/store";
-import Login from "./pages/Login";
-import Dashboard from "./pages/Dashboard";
-import Setting from "./pages/Setting"; // مسیر اصلاح شد
-import ProtectedRoute from "./routes/ProtectedRoute";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
+import { useSelector } from "react-redux";
+import {
+  Navigate,
+  Route,
+  BrowserRouter as Router,
+  Routes,
+} from "react-router-dom";
+
+import Dashboard from "./pages/Dashboard";
+import Login from "./pages/Login";
+import Setting from "./pages/Setting";
+// مسیر اصلاح شد
+import ProtectedRoute from "./routes/ProtectedRoute";
+import { RootState } from "./store/store";
+
 import "./App.css";
 
 function App() {
